@@ -11,6 +11,9 @@ numpy
 pillow
 regex
 python-dotenv
+langdetect
+
+
 
 
 
