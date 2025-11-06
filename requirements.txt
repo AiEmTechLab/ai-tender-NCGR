@@ -13,6 +13,9 @@ regex
 python-dotenv
 langdetect
 deep-translator
+pytesseract
+
+
 
 
 
