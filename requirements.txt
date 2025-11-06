@@ -1,0 +1,12 @@
+streamlit
+pandas
+openpyxl
+gtts
+groq
+pdfplumber
+PyMuPDF
+python-docx
+tqdm
+numpy
+pillow
+regex
