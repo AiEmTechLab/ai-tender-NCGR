@@ -27,53 +27,32 @@ def apply_theme():
     """تطبيق الخط العربي DiodrumArabic + تنسيق RTL + تحسين الأزرار والخطوط"""
     st.markdown(f"""
     <style>
-    /* 🎨 أزرار Streamlit — تنسيق احترافي */
-    div.stButton > button {{
-        background: linear-gradient(135deg, #5A33A4 0%, #8B5CF6 100%) !important;
-        color: white !important;
-        border: none !important;
-        border-radius: 14px !important;
-        font-size: 20px !important;
-        font-weight: 800 !important;
-        padding: 14px 45px !important;
-        transition: all 0.25s ease-in-out !important;
-        box-shadow: 0 4px 10px rgba(90, 51, 164, 0.25);
-        letter-spacing: 0.5px;
-    }}
-
-    /* ✨ تأثير عند التمرير (Hover) */
-    div.stButton > button:hover {{
-        background: linear-gradient(135deg, #8B5CF6 0%, #5A33A4 100%) !important;
-        transform: scale(1.05);
-        box-shadow: 0 6px 16px rgba(90, 51, 164, 0.35);
-    }}
 
     /* 🚀 الزر الأساسي (ابدأ) */
     button[kind="primary"] {{
-        background: linear-gradient(135deg, #6A1B9A, #8B5CF6) !important;
+        background: linear-gradient(135deg, #5A33A4 0%, #8B5CF6 100%) !important;
         color: white !important;
-        font-size: 18px !important;            /* ⬅️ أصغر قليلاً */
-        font-weight: 800 !important;
-        padding: 10px 32px !important;         /* ⬅️ تقليل الحشوة */
         border: none !important;
-        border-radius: 12px !important;
-        display: inline-flex !important;       /* ⬅️ لضمان شكل أفقي */
+        border-radius: 10px !important;
+        font-size: 17px !important;
+        font-weight: 700 !important;
+        padding: 10px 17px !important;         /* ← جعلها مستطيلة */
+        width: auto !important;
+        height: auto !important;
+        display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        flex-direction: row-reverse !important;/* ⬅️ يجعل 🚀 على اليمين */
-        gap: 8px !important;                   /* ⬅️ مسافة بين النص والإيموجي */
+        gap: 6px !important;
+        margin: 40px auto !important;         /* ← بالمنتصف */
         cursor: pointer !important;
+        box-shadow: 0 4px 12px rgba(90, 51, 164, 0.25);
         transition: all 0.25s ease-in-out !important;
-        box-shadow: 0 5px 14px rgba(90, 51, 164, 0.35);
-        animation: pulse 2s infinite;
-        width: auto !important;                /* ⬅️ لا يأخذ كامل العرض */
-        height: auto !important;
     }}
 
     button[kind="primary"]:hover {{
-        background: linear-gradient(135deg, #8B5CF6 0%, #5A33A4 100%) !important;
+        background: linear-gradient(135deg, #8B5CF6, #5A33A4) !important;
         transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(90, 51, 164, 0.45);
+        box-shadow: 0 6px 16px rgba(90, 51, 164, 0.35);
     }}
 
     /* ===== الخطوط ===== */
@@ -110,43 +89,6 @@ def apply_theme():
     h3 {{ font-size: 26px !important; }}
     h4 {{ font-size: 22px !important; }}
 
-    /* ===== الشريط الجانبي ===== */
-    [data-testid="stSidebar"] {{
-        min-width: 300px !important;
-        max-width: 320px !important;
-        background-color: #F9F8FF !important;
-        color: #333;
-        border-left: 2px solid {ACCENT_SOFT};
-        font-size: 18px !important;
-    }}
-
-    [data-testid="stSidebarNav"] {{
-        direction: rtl;
-        text-align: right;
-    }}
-
-    /* ===== الجداول ===== */
-    .stDataFrame, table, td, th {{
-        font-size: 18px !important;
-        font-family: 'DiodrumArabic', system-ui !important;
-    }}
-
-    /* ===== البطاقات ===== */
-    .card {{
-        background:#faf9ff;
-        border:1px solid #eee;
-        border-radius:12px;
-        padding:16px 18px;
-        font-size: 19px;
-        font-family: 'DiodrumArabic';
-    }}
-
-    /* ✨ حركة نبض خفيفة للزر */
-    @keyframes pulse {{
-      0% {{ transform: scale(1); box-shadow: 0 0 0 rgba(90, 51, 164, 0.4); }}
-      70% {{ transform: scale(1.05); box-shadow: 0 0 10px rgba(90, 51, 164, 0.5); }}
-      100% {{ transform: scale(1); box-shadow: 0 0 0 rgba(90, 51, 164, 0.4); }}
-    }}
     </style>
     """, unsafe_allow_html=True)
 
