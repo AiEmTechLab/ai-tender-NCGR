@@ -12,6 +12,8 @@ pillow
 regex
 python-dotenv
 langdetect
+deep-translator
+
 
 
 
